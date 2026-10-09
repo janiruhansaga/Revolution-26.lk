@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>REVOLUTION ’26 | Entrepreneurs Day | Nalanda College Entrepreneur Society</title>
+  <meta name="description" content="REVOLUTION ’26 — Competition Day by the Nalanda College Entrepreneur Society. 29 October 2026. Where strategy meets enterprise: chess, strategy, enterprise, revolution.">
+  <meta name="theme-color" content="#050608">
+  <meta name="author" content="Nalanda College Entrepreneur Society">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="./">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nalanda College Entrepreneur Society">
+  <meta property="og:title" content="REVOLUTION ’26 | Entrepreneurs Day">
+  <meta property="og:description" content="Where strategy meets enterprise. Competition Day — 29 October 2026. A strategic battlefield for the next generation of entrepreneurs.">
+  <meta property="og:image" content="scrolling animation/ezgif-frame-181.jpg">
+  <meta property="og:url" content="./">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="REVOLUTION ’26 | Entrepreneurs Day">
+  <meta name="twitter:description" content="Where strategy meets enterprise. Competition Day — 29 October 2026.">
+  <meta name="twitter:image" content="scrolling animation/ezgif-frame-181.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="scrolling animation/ezgif-frame-001.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "REVOLUTION ’26 — Entrepreneurs Day",
+    "description": "Competition Day by the Nalanda College Entrepreneur Society. Where strategy meets enterprise.",
+    "startDate": "2026-10-29",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "organizer": {
+      "@type": "Organization",
+      "name": "Nalanda College Entrepreneur Society"
+    }
+  }
+  </script>
+</head>
+
+<body class="is-loading">
+
+  <a class="skip-link" href="#hero">Skip to content</a>
+
+  <!-- Cinematic overlays (grain + vignette) — visual language, no canvas -->
+  <div class="stage-vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Page transition cover — sweeps in when entering /register -->
+  <div class="t-overlay" id="tOverlay" aria-hidden="true"><i></i></div>
+
+  <!-- ============================================================
+       LOADER
+  ============================================================ -->
+  <div class="loader" id="loader" role="status" aria-live="polite" aria-label="Loading experience">
+    <div class="loader__inner">
+      <p class="loader__eyebrow">Loading Experience</p>
+      <p class="loader__title">REVOLUTION <span>’26</span></p>
+      <div class="loader__bar"><i id="loaderBar"></i></div>
+      <p class="loader__pct"><span id="loaderPct">0</span><em>%</em></p>
+    </div>
+  </div>
+
+  <!-- Custom cursor (desktop only) -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#hero" data-cursor="link">REVOLUTION<span>’26</span></a>
+    <div class="nav__right">
+      <span class="nav__meta">Nalanda College · Entrepreneurs Day</span>
+      <button class="nav__btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" data-cursor="link">
+        <span class="nav__btn-label" data-open="Menu" data-close="Close">Menu</span>
+        <span class="nav__btn-icon" aria-hidden="true"><i></i><i></i></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="menu" id="menu" aria-hidden="true" aria-label="Main navigation">
+    <div class="menu__bg" aria-hidden="true"></div>
+    <div class="menu__inner">
+      <p class="menu__label">Navigation</p>
+      <ul class="menu__list">
+        <li style="--i:0"><a href="#hero" data-cursor="link"><span class="menu__num">01</span><span class="menu__word">Home</span></a></li>
+        <li style="--i:1"><a href="#strategy" data-cursor="link"><span class="menu__num">02</span><span class="menu__word">Strategy</span></a></li>
+        <li style="--i:2"><a href="#pattern" data-cursor="link"><span class="menu__num">03</span><span class="menu__word">Break the Pattern</span></a></li>
+        <li style="--i:3"><a href="register/register.html" data-cursor="link"><span class="menu__num">04</span><span class="menu__word">The Competition</span></a></li>
+        <li style="--i:4"><a href="#cta" data-cursor="link"><span class="menu__num">05</span><span class="menu__word">Make Your Move</span></a></li>
+      </ul>
+      <div class="menu__foot">
+        <div><span class="k">Date</span><span class="v">29 October 2026</span></div>
+        <div><span class="k">Society</span><span class="v">Nalanda College Entrepreneur Society</span></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scroll progress indicator -->
+  <div class="progress" aria-hidden="true">
+    <span class="progress__num" id="progressNum">01</span>
+    <span class="progress__track"><i id="progressFill"></i></span>
+    <span class="progress__num progress__num--total">08</span>
+  </div>
+
+  <main id="main">
+
+    <!-- ============================================================
+         01 — HERO · THE ONLY CINEMATIC FRAME-SEQUENCE SECTION
+         300vh tall; sticky stage inside it scrubs frames 001 → 240.
+         The sticky boundary ends at the hero's bottom, so the canvas
+         can never affect any section below it.
+    ============================================================ -->
+    <section class="hero" id="hero" data-sec="01" aria-label="Revolution ’26 introduction">
+      <div class="hero__sticky">
+
+        <!-- SYSTEM 1 — cinematic container (scoped to hero) -->
+        <div class="hero__cinematic">
+          <canvas id="heroCanvas" class="hero__canvas" aria-hidden="true"></canvas>
+          <div class="hero__scrim" aria-hidden="true"></div>
+          <svg class="hero__lines" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <path data-line pathLength="1" d="M180 760 L640 300" />
+            <path data-line pathLength="1" d="M640 300 L1180 470" />
+            <path data-line pathLength="1" d="M1180 470 L1240 180" />
+            <circle data-line pathLength="1" cx="640" cy="300" r="26" />
+            <circle data-line pathLength="1" cx="1240" cy="180" r="14" />
+          </svg>
+        </div>
+
+        <!-- Hero content — cinematic text phases.
+             Each .phase block is faded/translated per frame from the
+             single heroTimeline config in scroll.js, so typography,
+             frames and HUD all read the SAME progress value. -->
+        <div class="hero__content" id="heroContent">
+
+          <!-- phase · opening — visible at rest, dissolves on first scroll -->
+          <div class="phase phase--opening" data-phase="opening">
+            <p class="hero__eyebrow">
+              <span class="mask"><i>Nalanda College</i></span>
+              <span class="mask"><i>Entrepreneur Society</i></span>
+            </p>
+            <p class="hero__sub"><span class="mask"><i>Competition Day</i></span></p>
+            <p class="hero__tag">Where strategy meets enterprise.</p>
+          </div>
+
+          <!-- phase · the title reveal -->
+          <div class="phase phase--revolution" data-phase="revolution">
+            <p class="phase__kicker">29 October 2026</p>
+            <h1 class="hero__title">
+              <span class="mask mask--wide"><i>Revolution</i></span>
+              <span class="mask mask--year"><i>’26</i></span>
+            </h1>
+          </div>
+
+          <!-- phase · chapter card (lower-left) -->
+          <div class="phase phase--chapter" data-phase="kingsMove">
+            <span class="phase__rule" aria-hidden="true"></span>
+            <p class="phase__chapter">The King’s Move</p>
+          </div>
+
+          <!-- phase · the five beats (center-left) -->
+          <div class="phase phase--beat" data-phase="king">
+            <span class="phase__idx" aria-hidden="true">01</span>
+            <p class="phase__word">King</p>
+            <span class="phase__rule" aria-hidden="true"></span>
+          </div>
+          <div class="phase phase--beat" data-phase="board">
+            <span class="phase__idx" aria-hidden="true">02</span>
+            <p class="phase__word">Board</p>
+            <span class="phase__rule" aria-hidden="true"></span>
+          </div>
+          <div class="phase phase--beat" data-phase="move">
+            <span class="phase__idx" aria-hidden="true">03</span>
+            <p class="phase__word">Move</p>
+            <span class="phase__rule" aria-hidden="true"></span>
+          </div>
+          <div class="phase phase--beat" data-phase="pieces">
+            <span class="phase__idx" aria-hidden="true">04</span>
+            <p class="phase__word">Pieces</p>
+            <span class="phase__rule" aria-hidden="true"></span>
+          </div>
+
+          <!-- phase · climax — over the board-glow frames (169–240) -->
+          <div class="phase phase--checkmate" data-phase="checkmate">
+            <span class="phase__idx" aria-hidden="true">05</span>
+            <p class="phase__word phase__word--gold">Checkmate</p>
+            <span class="phase__rule phase__rule--wide" aria-hidden="true"></span>
+          </div>
+
+          <!-- phase · finale — holds through the last frame -->
+          <div class="phase phase--finale" data-phase="finale">
+            <p class="phase__finale-line">Where strategy meets enterprise.</p>
+            <p class="phase__finale-date"><b>Revolution ’26</b> · 29 October 2026</p>
+          </div>
+        </div>
+
+        <!-- Sequence HUD -->
+        <div class="hero__hud" aria-hidden="true">
+          <span class="hud__item">Sequence · <b id="hudFrame">001</b> / 240</span>
+          <span class="hud__item hud__item--right">Scroll to scrub</span>
+          <span class="hud__bar"><i id="hudBar"></i></span>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true">
+          <span>Scroll</span>
+          <i class="scroll-cue__line"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         02 — STRATEGY (SYSTEM 2 — normal scroll reveals)
+    ============================================================ -->
+    <section class="sec sec--strategy" id="strategy" data-sec="02" aria-label="Strategy">
+      <div class="wrap">
+        <p class="sec-label reveal">02 — Strategy</p>
+        <h2 class="h-display reveal" style="--d:.08s">Strategy</h2>
+        <p class="lede reveal" style="--d:.16s">Success is not about making the most moves.<br>It is about making the right one.</p>
+
+        <ol class="steps">
+          <li class="step reveal" style="--d:.05s">
+            <span class="step__num">01</span>
+            <span class="step__line" aria-hidden="true"></span>
+            <h3>Think</h3>
+            <p>See the whole board before you touch a single piece.</p>
+          </li>
+          <li class="step reveal" style="--d:.15s">
+            <span class="step__num">02</span>
+            <span class="step__line" aria-hidden="true"></span>
+            <h3>Calculate</h3>
+            <p>Measure risk, weigh cost, and choose the move that matters.</p>
+          </li>
+          <li class="step reveal" style="--d:.25s">
+            <span class="step__num">03</span>
+            <span class="step__line" aria-hidden="true"></span>
+            <h3>Execute</h3>
+            <p>Decide with conviction — then move without hesitation.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03 — BREAK THE PATTERN (static, CSS chess-grid treatment)
+    ============================================================ -->
+    <section class="sec sec--pattern" id="pattern" data-sec="03" aria-label="Break the pattern">
+      <div class="pattern__grid" aria-hidden="true"></div>
+      <div class="pattern__glow" aria-hidden="true"></div>
+
+      <svg class="pattern__moves" data-reveal-lines viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+        <path pathLength="1" d="M96 780 L96 300 L520 300" />
+        <path pathLength="1" d="M1344 140 L1344 560 L980 560" />
+        <path pathLength="1" d="M520 300 L980 560" />
+        <circle pathLength="1" cx="520" cy="300" r="10" />
+        <circle pathLength="1" cx="980" cy="560" r="10" />
+      </svg>
+
+      <div class="wrap pattern__layout">
+        <div class="pattern__left">
+          <p class="sec-label reveal">03 — Break the Pattern</p>
+          <h2 class="h-display reveal" style="--d:.08s">Break<br>the pattern.</h2>
+        </div>
+        <div class="pattern__right">
+          <p class="pattern__statement reveal" style="--d:.12s">
+            <span class="pattern__rule" aria-hidden="true"></span>
+            Predictable moves create predictable results.
+          </p>
+          <p class="pattern__statement pattern__statement--gold reveal" style="--d:.26s">
+            <span class="pattern__rule" aria-hidden="true"></span>
+            Revolution begins when someone chooses a different move.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         04 — FROM STRATEGY TO ENTERPRISE
+    ============================================================ -->
+    <section class="sec sec--enterprise" id="enterprise" data-sec="04" aria-label="From strategy to enterprise">
+      <div class="wrap enterprise__layout">
+        <div class="enterprise__intro">
+          <p class="sec-label reveal">04 — Enterprise</p>
+          <h2 class="h-display h-display--stack reveal" style="--d:.08s">
+            <span>From</span><span>Strategy</span><span>to</span><span class="gold">Enterprise.</span>
+          </h2>
+          <p class="lede reveal" style="--d:.18s">An idea is only the beginning.</p>
+        </div>
+
+        <div class="flow" role="list">
+          <div class="flow__step reveal" role="listitem" style="--d:.05s"><span class="flow__word">Idea</span></div>
+          <span class="flow__arrow" data-reveal aria-hidden="true"><i></i></span>
+          <div class="flow__step reveal" role="listitem" style="--d:.15s"><span class="flow__word">Strategy</span></div>
+          <span class="flow__arrow" data-reveal aria-hidden="true"><i></i></span>
+          <div class="flow__step reveal" role="listitem" style="--d:.25s"><span class="flow__word">Action</span></div>
+          <span class="flow__arrow" data-reveal aria-hidden="true"><i></i></span>
+          <div class="flow__step reveal" role="listitem" style="--d:.35s"><span class="flow__word gold">Impact</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         05 — THE COMPETITION (editorial information layout)
+    ============================================================ -->
+    <section class="sec sec--competition" id="competition" data-sec="05" aria-label="The Competition">
+      <div class="comp__ghost" data-parallax="0.06" aria-hidden="true">26</div>
+      <div class="wrap">
+        <p class="sec-label reveal">05 — The Competition</p>
+        <h2 class="h-display reveal" style="--d:.06s">The<br>Competition</h2>
+
+        <div class="comp__identity reveal" style="--d:.14s">
+          <span class="comp__name">Revolution ’26</span>
+          <span class="comp__rule" aria-hidden="true"></span>
+          <span class="comp__name comp__name--muted">Entrepreneurs Day</span>
+        </div>
+
+        <div class="comp__grid">
+          <div class="comp__datecell reveal" style="--d:.06s">
+            <span class="comp__k">Date</span>
+            <p class="comp__bigdate">29<i>.</i>10<i>.</i>26</p>
+            <p class="comp__month">October 2026 — Competition Day</p>
+            <span class="comp__corner" aria-hidden="true"></span>
+          </div>
+
+          <dl class="comp__rows">
+            <div class="comp__row reveal" style="--d:.12s">
+              <dt>Event</dt>
+              <dd>Revolution ’26 · Entrepreneurs Day</dd>
+            </div>
+            <div class="comp__row reveal" style="--d:.2s">
+              <dt>Arenas</dt>
+              <dd>Strategy · Innovation · Leadership · Enterprise</dd>
+            </div>
+            <div class="comp__row reveal" style="--d:.28s">
+              <dt>Organized by</dt>
+              <dd>Nalanda College Entrepreneur Society</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="comp__foot reveal" style="--d:.16s">
+          <p class="comp__society">Nalanda College<br>Entrepreneur Society</p>
+          <span class="comp__divider" aria-hidden="true"></span>
+          <p class="comp__note">An exclusive competition announcement.<br>Invitation is earned on the board.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         06 — YOUR MOVE (dramatic, staggered reveals)
+    ============================================================ -->
+    <section class="sec sec--move" id="challenge" data-sec="06" aria-label="Your move">
+      <div class="move__glow" aria-hidden="true"></div>
+      <div class="move__grid" aria-hidden="true"></div>
+      <div class="wrap wrap--center">
+        <p class="sec-label reveal">06 — The Challenge</p>
+        <h2 class="h-display h-display--center reveal" style="--d:.08s">Your move.</h2>
+
+        <ol class="questions">
+          <li class="q reveal" style="--d:.2s">
+            <span class="q__num">Q·01</span>
+            <span class="q__text">Can you think differently?</span>
+          </li>
+          <li class="q reveal" style="--d:.38s">
+            <span class="q__num">Q·02</span>
+            <span class="q__text">Can you take the risk?</span>
+          </li>
+          <li class="q reveal" style="--d:.56s">
+            <span class="q__num">Q·03</span>
+            <span class="q__text">Can you build the future?</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         07 — COMPETITION EXPERIENCE
+    ============================================================ -->
+    <section class="sec sec--experience" id="experience" data-sec="07" aria-label="Competition Experience">
+      <div class="wrap">
+        <p class="sec-label reveal">07 — The Experience</p>
+        <h2 class="h-display h-display--sm reveal" style="--d:.06s">Competition<br>Experience</h2>
+
+        <div class="cards">
+          <article class="card reveal" style="--d:.04s" data-cursor="link">
+            <span class="card__num">01</span>
+            <h3>Strategy</h3>
+            <p>Think beyond the obvious.</p>
+            <span class="card__corner" aria-hidden="true"></span>
+          </article>
+          <article class="card reveal" style="--d:.12s" data-cursor="link">
+            <span class="card__num">02</span>
+            <h3>Innovation</h3>
+            <p>Turn ideas into possibilities.</p>
+            <span class="card__corner" aria-hidden="true"></span>
+          </article>
+          <article class="card reveal" style="--d:.2s" data-cursor="link">
+            <span class="card__num">03</span>
+            <h3>Leadership</h3>
+            <p>Make decisions with purpose.</p>
+            <span class="card__corner" aria-hidden="true"></span>
+          </article>
+          <article class="card reveal" style="--d:.28s" data-cursor="link">
+            <span class="card__num">04</span>
+            <h3>Enterprise</h3>
+            <p>Transform ideas into impact.</p>
+            <span class="card__corner" aria-hidden="true"></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         08 — FINAL CTA
+    ============================================================ -->
+    <section class="sec sec--cta" id="cta" data-sec="08" aria-label="Call to action">
+      <div class="cta__glow" aria-hidden="true"></div>
+      <div class="cta__grid" aria-hidden="true"></div>
+      <div class="wrap wrap--center">
+        <p class="sec-label reveal">08 — Final Call</p>
+        <h2 class="h-display h-display--center reveal" style="--d:.06s">Make<br>your move.</h2>
+
+        <div class="cta__identity reveal" style="--d:.16s">
+          <p class="cta__event">Revolution ’26</p>
+          <p class="cta__day">Entrepreneurs Day</p>
+          <p class="cta__org">Nalanda College<br>Entrepreneur Society</p>
+        </div>
+
+        <a class="btn reveal" style="--d:.26s" href="register/register.html" data-enter data-cursor="link">
+          <span>Enter the Revolution</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </a>
+
+        <p class="cta__date reveal" style="--d:.34s">29 October 2026</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p class="footer__brand">REVOLUTION<span>’26</span></p>
+      <p class="footer__copy">© 2026 Nalanda College Entrepreneur Society · Where strategy meets enterprise.</p>
+      <a class="footer__top" href="#hero" data-cursor="link">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="js/frames.js" defer></script>
+  <script src="js/animation.js" defer></script>
+  <script src="js/scroll.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
