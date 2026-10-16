@@ -96,8 +96,8 @@ const competitions = [
    EDIT THE DATES HERE once they are confirmed.
    ------------------------------------------------------------ */
 const eventDates = [
-  { label: "REGISTRATION OPENS", date: "01 OCTOBER 2026", placeholder: true },
-  { label: "REGISTRATION CLOSES", date: "20 OCTOBER 2026", placeholder: true },
+  { label: "REGISTRATION OPENS", date: "16 OCTOBER 2026", placeholder: true },
+  { label: "REGISTRATION CLOSES", date: "25 OCTOBER 2026", placeholder: true },
   { label: "COMPETITION DAY", date: "29 OCTOBER 2026", placeholder: false }
 ];
 
