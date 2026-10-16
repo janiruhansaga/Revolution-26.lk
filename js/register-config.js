@@ -61,7 +61,7 @@ const competitions = [
     id: "aiProductInnovation",
     formKey: "aiProductInnovation",
     number: "03",
-    title: "AI PRODUCT INNOVATION",
+    title: "AI Video Competition",
     tagline: "IMAGINE IT. CREATE IT. BRING IT TO LIFE.",
     description: "Identify a real-world problem, develop an innovative product solution and use AI-powered tools to create a compelling promotional concept.",
     focus: ["AI", "Innovation", "Product Development", "Creativity", "Marketing"],
