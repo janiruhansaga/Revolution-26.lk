@@ -51,6 +51,13 @@
         return '<div class="rcard__psec"><h4 class="rcard__ph">' + head + '</h4><p class="rcard__pp">' + esc(body) + '</p></div>';
       }
 
+      function topicSecs(comp) {
+        if (!comp.topics || !comp.topics.length) return '';
+        return comp.topics.map(function (t) {
+          return sec(esc(t.name || ''), t.text);
+        }).join('');
+      }
+
       return '' +
         '<article class="rcard reveal" id="comp-' + esc(c.id) + '" data-comp="' + esc(c.id) + '">' +
           '<span class="rcard__grid" aria-hidden="true"></span>' +
@@ -73,6 +80,7 @@
           '<div class="rcard__panel" id="' + panelId + '" role="region" aria-label="' + esc(c.title) + ' details">' +
             '<div class="rcard__panelin">' +
               sec('About the challenge', d.about) +
+              topicSecs(c) +
               sec('Who can participate', d.who) +
               sec('What you will need', d.need) +
               sec('Format', d.format) +
@@ -94,10 +102,11 @@
     var nav = $('#moveNav');
     if (!nav || !hasCfg.comps) return;
     var shorts = {
-      businessPitch: 'Pitch',
       entrepreneurshipQuiz: 'Quiz',
-      aiProductInnovation: 'AI',
-      popularSociety: 'Society'
+      businessPitch: 'Pitch',
+      problemSolving: 'Case Study',
+      aiVideoCreation: 'AI Video',
+      posterDesigning: 'Poster'
     };
     nav.innerHTML = competitions.map(function (c) {
       var word = c.short || shorts[c.id] || c.title;
@@ -118,7 +127,7 @@
         '<li class="dates__item reveal" style="--d:' + (0.15 + i * 0.12) + 's">' +
           '<span class="dates__label">' + esc(d.label) + '</span>' +
           '<span class="dates__dot" aria-hidden="true"></span>' +
-          '<b class="dates__date">' + esc(d.date) + (d.placeholder ? '<em>Placeholder — editable in config</em>' : '') + '</b>' +
+          '<b class="dates__date">' + esc(d.date) + '</b>' +
         '</li>'
       );
     });
