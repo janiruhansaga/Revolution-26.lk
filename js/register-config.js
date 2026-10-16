@@ -97,7 +97,7 @@ const competitions = [
    ------------------------------------------------------------ */
 const eventDates = [
   { label: "REGISTRATION OPENS", date: "16 OCTOBER 2026", placeholder: true },
-  { label: "REGISTRATION CLOSES", date: "25 OCTOBER 2026", placeholder: true },
+  { label: "REGISTRATION CLOSES", date: "26 OCTOBER 2026", placeholder: true },
   { label: "COMPETITION DAY", date: "29 OCTOBER 2026", placeholder: false }
 ];
 
