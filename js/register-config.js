@@ -44,10 +44,6 @@ const competitions = [
     focus: ["Business Knowledge", "Quick Thinking", "Accuracy", "Decision Making"],
     details: {
     Competition Theme : ":Entrepreneurship Knowledge and General Knowledgeeed under pressure.This competition challenges participants to demonstrate their entrepreneurial knowledge, general awareness, analytical thinking and ability to make informed decisions within a limited time. ",
-      who: "Open to registered participants representing recognized school Entrepreneur Societies.",
-      need: "Teams of 2 participants per school. One connected device is permitted for the tie-break round only. No external references during the quiz rounds.",
-      format: "Three rounds — Qualifier (written), Rapid Fire (buzzer) and Tie-break. Elimination format with a live scoreboard.",
-      judging: "Highest combined score across rounds. A speed bonus applies in the Rapid Fire round. Decisions of the judging panel are final."
     }
   },
   {
