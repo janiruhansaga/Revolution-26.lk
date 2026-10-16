@@ -11,6 +11,7 @@
 
   var hasCfg = {
     links: typeof registrationLinks !== 'undefined',
+    guidelines: typeof guidelinesPdf !== 'undefined',
     comps: typeof competitions !== 'undefined',
     dates: typeof eventDates !== 'undefined',
     faqs: typeof faqs !== 'undefined'
@@ -27,7 +28,12 @@
     if (hasCfg.links && registrationLinks[c.formKey]) return registrationLinks[c.formKey];
     return c.registrationUrl || '#';
   }
+  function resolveGuidelines(c) {
+    if (hasCfg.guidelines && guidelinesPdf) return guidelinesPdf;
+    return c.guidelinesUrl || '';
+  }
   var ARROW = '<svg class="rcard__arrow" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
+  var DOWNLOAD = '<svg class="rcard__arrow" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
 
   /* ============================================================
      RENDER — competitions
@@ -39,12 +45,17 @@
 
     grid.innerHTML = competitions.map(function (c) {
       var url = resolveUrl(c);
+      var guideUrl = resolveGuidelines(c);
       var d = c.details || {};
       var panelId = 'panel-' + c.id;
 
       var focus = (c.focus || []).map(function (f) {
         return '<li>' + esc(f) + '</li>';
       }).join('');
+
+      var guideBtn = guideUrl
+        ? '<a class="btn btn--ghost" href="' + esc(guideUrl) + '" target="_blank" rel="noopener"><span>Guidelines</span>' + DOWNLOAD + '</a>'
+        : '';
 
       function sec(head, body) {
         if (!body) return '';
@@ -74,6 +85,7 @@
             '</div>' +
             '<div class="rcard__actions">' +
               '<a class="btn" href="' + esc(url) + '" data-form="' + esc(c.formKey || c.id) + '"><span>Register now</span>' + ARROW + '</a>' +
+              guideBtn +
               '<button class="rcard__details" type="button" aria-expanded="false" aria-controls="' + panelId + '">View details</button>' +
             '</div>' +
           '</div>' +

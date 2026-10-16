@@ -526,6 +526,20 @@
   background: rgba(255, 215, 0, .05);
 }
 
+/* secondary / ghost button (e.g. Guidelines) */
+.btn--ghost {
+  border-color: var(--hairline);
+  background: transparent;
+}
+.btn--ghost::before { display: none; }
+.btn--ghost:hover,
+.btn--ghost:focus-visible {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(255, 215, 0, .05);
+  box-shadow: none;
+}
+
 /* expandable detail panel */
 .rcard__panel {
   grid-column: 1 / -1;

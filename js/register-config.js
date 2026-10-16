@@ -5,9 +5,10 @@
    Official source: “Revolution ’26 Inter-School Competition
    Guidelines” (Nalanda College Entrepreneur Society).
    1) registrationLinks … official registration form URL(s)
-   2) competitions ……… the five competitions, copy and details
-   3) eventDates ………… the important-dates timeline
-   4) faqs ………………… accordion answers
+   2) guidelinesPdf ……… official guidelines PDF (all challenges)
+   3) competitions ……… the five competitions, copy and details
+   4) eventDates ………… the important-dates timeline
+   5) faqs ………………… accordion answers
    ============================================================ */
 
 /* ------------------------------------------------------------
@@ -27,7 +28,16 @@ const registrationLinks = {
 };
 
 /* ------------------------------------------------------------
-   2) COMPETITIONS — the five official REVOLUTION ’26 challenges.
+   2) GUIDELINES PDF
+   Official competition guidelines document. The “Guidelines”
+   button on every competition card points here. A single shared
+   PDF is referenced by all five challenges — replace the URL to
+   publish a revised document.
+   ------------------------------------------------------------ */
+const guidelinesPdf = "https://drive.google.com/uc?export=download&id=1Dr1VgbEtQvEgti67C9021_cEpORGQhr5";
+
+/* ------------------------------------------------------------
+   3) COMPETITIONS — the five official REVOLUTION ’26 challenges.
    Rendered as editorial panels in the order below.
    ------------------------------------------------------------ */
 const competitions = [
@@ -132,7 +142,7 @@ const competitions = [
 ];
 
 /* ------------------------------------------------------------
-   3) IMPORTANT DATES — official timeline.
+   4) IMPORTANT DATES — official timeline.
    Registration and submission deadlines are announced by the
    organizing committee; the competition day is fixed below.
    ------------------------------------------------------------ */
@@ -143,7 +153,7 @@ const eventDates = [
 ];
 
 /* ------------------------------------------------------------
-   4) FAQ
+   5) FAQ
    ------------------------------------------------------------ */
 const faqs = [
   {
