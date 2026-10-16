@@ -29,17 +29,10 @@ const competitions = [
     id: "businessPitch",
     formKey: "businessPitch",
     number: "01",
-    title: "BUSINESS PITCH",
+    title: "Business Pitch Competition",
     tagline: "TURN IDEAS INTO OPPORTUNITIES.",
-    description: "Present an original business concept and demonstrate how your idea can solve a real problem, create value and become a viable opportunity.",
+    description: "Participating schools must submit their business pitch presentations in PDF or PowerPoint format before the announced deadline. Following preliminary evaluation, the top five teams will be selected to deliver live presentations at Nalanda College on the competition day. ",
     focus: ["Business Thinking", "Innovation", "Communication", "Strategy"],
-    details: {
-      about: "Participants present an original business concept in a concise, high-impact pitch. The challenge moves from problem identification to value proposition, revenue logic and execution — ending in a live presentation before the judging panel.",
-      who: "Open to registered participants representing recognized school Entrepreneur Societies.",
-      need: "A team of 2–4 participants, a prepared pitch deck (maximum 10 slides), and one representative to present. Submit your deck on a pen drive at the briefing desk 30 minutes before your round.",
-      format: "5-minute pitch + 3-minute judge questions. Each team presents once; the top teams advance to a final round on the same day.",
-      judging: "Originality (25%) · Problem–solution fit (25%) · Business viability (25%) · Presentation (25%)"
-    }
   },
   {
     id: "entrepreneurshipQuiz",
