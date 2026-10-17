@@ -19,6 +19,9 @@
    Replace the value with a category-specific form if one is
    published for a competition.
    ------------------------------------------------------------ */
+/* Main Event Registration - REVOLUTION '26 */
+const MAIN_EVENT_REGISTRATION_URL = "YOUR_MAIN_GOOGLE_FORM_URL";
+
 const registrationLinks = {
   entrepreneurshipQuiz: "https://docs.google.com/forms/d/e/1FAIpQLSdkMUWZlrEbM_ta3a6Tw9XIUkhkz52JKBB2Wfke_lTNaO7RQA/viewform?usp=header",
   businessPitch: "https://docs.google.com/forms/d/e/1FAIpQLSdkMUWZlrEbM_ta3a6Tw9XIUkhkz52JKBB2Wfke_lTNaO7RQA/viewform?usp=header",

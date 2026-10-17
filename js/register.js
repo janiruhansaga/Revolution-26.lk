@@ -9,13 +9,14 @@
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  var hasCfg = {
-    links: typeof registrationLinks !== 'undefined',
-    guidelines: typeof guidelinesPdf !== 'undefined',
-    comps: typeof competitions !== 'undefined',
-    dates: typeof eventDates !== 'undefined',
-    faqs: typeof faqs !== 'undefined'
-  };
+   var hasCfg = {
+     links: typeof registrationLinks !== 'undefined',
+     guidelines: typeof guidelinesPdf !== 'undefined',
+     comps: typeof competitions !== 'undefined',
+     dates: typeof eventDates !== 'undefined',
+     faqs: typeof faqs !== 'undefined',
+     mainEvent: typeof MAIN_EVENT_REGISTRATION_URL !== 'undefined'
+   };
 
   /* ---------- helpers ---------- */
   function $(sel, ctx) { return (ctx || document).querySelector(sel); }
@@ -23,6 +24,12 @@
     return String(s).replace(/[&<>"']/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
     });
+  }
+  function resolveMainEventUrl() {
+    if (hasCfg.mainEvent && MAIN_EVENT_REGISTRATION_URL) {
+      return MAIN_EVENT_REGISTRATION_URL;
+    }
+    return 'YOUR_MAIN_GOOGLE_FORM_URL';
   }
   function resolveUrl(c) {
     if (hasCfg.links && registrationLinks[c.formKey]) return registrationLinks[c.formKey];
@@ -38,6 +45,20 @@
   /* ============================================================
      RENDER — competitions
   ============================================================ */
+  function setupMainEventRegistration() {
+    var btn = $('#mainRegBtn');
+    if (!btn) return;
+    var url = resolveMainEventUrl();
+    if (url && url !== 'YOUR_MAIN_GOOGLE_FORM_URL') {
+      btn.setAttribute('href', url);
+    }
+    // ensure it opens in new tab with security
+    if (!btn.getAttribute('target')) {
+      btn.setAttribute('target', '_blank');
+      btn.setAttribute('rel', 'noopener noreferrer');
+    }
+  }
+
   function renderCompetitions() {
     var grid = $('#rGrid');
     if (!grid) return;
@@ -349,6 +370,7 @@
   ============================================================ */
   function boot() {
     splitTitle();
+    setupMainEventRegistration();
     renderCompetitions();
     renderMoveNav();
     renderDates();
