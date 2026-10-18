@@ -5,9 +5,10 @@
    Official source: “Revolution ’26 Inter-School Competition
    Guidelines” (Nalanda College Entrepreneur Society).
    1) official links …… registration form + guidelines PDFs
-   2) competitions ……… the five competitions, copy and details
-   3) eventDates ………… the important-dates timeline
-   4) faqs ………………… accordion answers
+   2) guidelines ………… per-competition official PDFs
+   3) competitions ……… the five competitions, copy and details
+   4) eventDates ………… the important-dates timeline
+   5) faqs ………………… accordion answers
    ============================================================ */
 
 /* ------------------------------------------------------------
@@ -26,8 +27,8 @@ const MAIN_EVENT_REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSd
 /* Main event guidelines — official “REVOLUTION ’26” guidelines PDF */
 const MAIN_EVENT_GUIDELINES_PDF = "https://drive.google.com/file/d/1wyhuX9Wu8zMv5ajw26EzY6bmR6Bo3TEQ/view?usp=sharing";
 
-/* Per-competition registration forms (single official form for
-   all five competitions until category-specific forms exist) */
+/* Per-competition registration forms — each competition has its
+   own official Google Form. Keys match the competition ids. */
 const registrationLinks = {
   entrepreneurshipQuiz: "https://docs.google.com/forms/d/e/1FAIpQLSfaUS61G7CCvWZ0dxbToU9BmpVtsCM-5_hXYaqCDEZIMF15Xg/viewform?usp=publish-editor",
   businessPitch: "https://docs.google.com/forms/d/e/1FAIpQLSe5naQZP2GT_W7mwdF3jjemodSi0-kq1k-4UI7QqSuNUF43vA/viewform?usp=publish-editor",
@@ -51,7 +52,7 @@ const competitionGuidelines = {
 };
 
 /* ------------------------------------------------------------
-   2) COMPETITIONS — the five official REVOLUTION ’26 challenges.
+   3) COMPETITIONS — the five official REVOLUTION ’26 challenges.
    Rendered as editorial panels in the order below.
    ------------------------------------------------------------ */
 const competitions = [
@@ -156,7 +157,7 @@ const competitions = [
 ];
 
 /* ------------------------------------------------------------
-   3) IMPORTANT DATES — official timeline.
+   4) IMPORTANT DATES — official timeline.
    Registration and submission deadlines are announced by the
    organizing committee; the competition day is fixed below.
    ------------------------------------------------------------ */
@@ -167,7 +168,7 @@ const eventDates = [
 ];
 
 /* ------------------------------------------------------------
-   4) FAQ
+   5) FAQ
    ------------------------------------------------------------ */
 const faqs = [
   {
