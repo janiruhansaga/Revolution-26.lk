@@ -23,11 +23,11 @@
 const MAIN_EVENT_REGISTRATION_URL = "YOUR_MAIN_GOOGLE_FORM_URL";
 
 const registrationLinks = {
-  entrepreneurshipQuiz: "https://docs.google.com/forms/d/e/1FAIpQLSdkMUWZlrEbM_ta3a6Tw9XIUkhkz52JKBB2Wfke_lTNaO7RQA/viewform?usp=header",
-  businessPitch: "https://docs.google.com/forms/d/e/1FAIpQLSdkMUWZlrEbM_ta3a6Tw9XIUkhkz52JKBB2Wfke_lTNaO7RQA/viewform?usp=header",
-  problemSolving: "https://docs.google.com/forms/d/e/1FAIpQLSdkMUWZlrEbM_ta3a6Tw9XIUkhkz52JKBB2Wfke_lTNaO7RQA/viewform?usp=header",
+  entrepreneurshipQuiz: "https://docs.google.com/forms/d/e/1FAIpQLSfaUS61G7CCvWZ0dxbToU9BmpVtsCM-5_hXYaqCDEZIMF15Xg/viewform?usp=publish-editor",
+  businessPitch: "https://docs.google.com/forms/d/e/1FAIpQLSe5naQZP2GT_W7mwdF3jjemodSi0-kq1k-4UI7QqSuNUF43vA/viewform?usp=publish-editor",
+  problemSolving: "https://docs.google.com/forms/d/e/1FAIpQLSfg8-2xJSpXh5UHF_lub3nZ5NpMXLvABVqSDtgsjnZbfHrqhQ/viewform?usp=publish-editor",
   aiVideoCreation: "https://docs.google.com/forms/d/e/1FAIpQLScwpcYzRumVJ56UZbQobDlseHg93DvOaIdQ_4M9F3lAphdhQw/viewform?usp=header",
-  posterDesigning: "https://docs.google.com/forms/d/e/1FAIpQLSdkMUWZlrEbM_ta3a6Tw9XIUkhkz52JKBB2Wfke_lTNaO7RQA/viewform?usp=header"
+  posterDesigning: "https://docs.google.com/forms/d/e/1FAIpQLSdEYs29mf-6t2hBjk456hBnPieIHFW-2ghPUgaq5P5X45Zy1A/viewform?usp=publish-editor"
 };
 
 /* ------------------------------------------------------------
