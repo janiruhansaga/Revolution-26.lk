@@ -11,11 +11,12 @@
 
    var hasCfg = {
      links: typeof registrationLinks !== 'undefined',
-     guidelines: typeof guidelinesPdf !== 'undefined',
+     guidelines: typeof competitionGuidelines !== 'undefined',
      comps: typeof competitions !== 'undefined',
      dates: typeof eventDates !== 'undefined',
      faqs: typeof faqs !== 'undefined',
-     mainEvent: typeof MAIN_EVENT_REGISTRATION_URL !== 'undefined'
+     mainEvent: typeof MAIN_EVENT_REGISTRATION_URL !== 'undefined',
+     mainGuidelines: typeof MAIN_EVENT_GUIDELINES_PDF !== 'undefined'
    };
 
   /* ---------- helpers ---------- */
@@ -36,7 +37,7 @@
     return c.registrationUrl || '#';
   }
   function resolveGuidelines(c) {
-    if (hasCfg.guidelines && guidelinesPdf) return guidelinesPdf;
+    if (hasCfg.guidelines && competitionGuidelines[c.id]) return competitionGuidelines[c.id];
     return c.guidelinesUrl || '';
   }
   var ARROW = '<svg class="rcard__arrow" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
@@ -47,15 +48,27 @@
   ============================================================ */
   function setupMainEventRegistration() {
     var btn = $('#mainRegBtn');
-    if (!btn) return;
-    var url = resolveMainEventUrl();
-    if (url && url !== 'YOUR_MAIN_GOOGLE_FORM_URL') {
-      btn.setAttribute('href', url);
+    if (btn) {
+      var url = resolveMainEventUrl();
+      if (url && url !== 'YOUR_MAIN_GOOGLE_FORM_URL') {
+        btn.setAttribute('href', url);
+      }
+      // ensure it opens in new tab with security
+      if (!btn.getAttribute('target')) {
+        btn.setAttribute('target', '_blank');
+        btn.setAttribute('rel', 'noopener noreferrer');
+      }
     }
-    // ensure it opens in new tab with security
-    if (!btn.getAttribute('target')) {
-      btn.setAttribute('target', '_blank');
-      btn.setAttribute('rel', 'noopener noreferrer');
+    var guideBtn = $('#mainGuideBtn');
+    if (guideBtn) {
+      if (hasCfg.mainGuidelines && MAIN_EVENT_GUIDELINES_PDF) {
+        guideBtn.setAttribute('href', MAIN_EVENT_GUIDELINES_PDF);
+        guideBtn.removeAttribute('aria-disabled');
+      } else {
+        guideBtn.removeAttribute('href');
+        guideBtn.setAttribute('aria-disabled', 'true');
+        guideBtn.setAttribute('title', 'Main event guidelines PDF — link not yet configured');
+      }
     }
   }
 
@@ -75,7 +88,7 @@
       }).join('');
 
       var guideBtn = guideUrl
-        ? '<a class="btn btn--ghost" href="' + esc(guideUrl) + '" target="_blank" rel="noopener"><span>Guidelines</span>' + DOWNLOAD + '</a>'
+        ? '<a class="btn btn--ghost" href="' + esc(guideUrl) + '" target="_blank" rel="noopener" aria-label="View the ' + esc(c.title) + ' guidelines PDF (opens in a new tab)"><span>View competition guidelines</span>' + DOWNLOAD + '</a>'
         : '';
 
       function sec(head, body) {

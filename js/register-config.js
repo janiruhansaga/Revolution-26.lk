@@ -4,24 +4,30 @@
    ------------------------------------------------------------
    Official source: “Revolution ’26 Inter-School Competition
    Guidelines” (Nalanda College Entrepreneur Society).
-   1) registrationLinks … official registration form URL(s)
-   2) guidelinesPdf ……… official guidelines PDF (all challenges)
-   3) competitions ……… the five competitions, copy and details
-   4) eventDates ………… the important-dates timeline
-   5) faqs ………………… accordion answers
+   1) official links …… registration form + guidelines PDFs
+   2) competitions ……… the five competitions, copy and details
+   3) eventDates ………… the important-dates timeline
+   4) faqs ………………… accordion answers
    ============================================================ */
 
 /* ------------------------------------------------------------
-   1) REGISTRATION LINKS
-   REVOLUTION ’26 uses a single official registration form for
-   all five competitions. Each competition points at a key below
-   through its `formKey` — links are never scattered in the HTML.
-   Replace the value with a category-specific form if one is
-   published for a competition.
+   1) OFFICIAL GOOGLE DRIVE / FORM LINKS
+   Every link used by the registration portal lives in this
+   section. Replace a value here to update the site — no other
+   file needs editing. Set a value to "" to mark it unconfigured.
    ------------------------------------------------------------ */
-/* Main Event Registration - REVOLUTION '26 */
-const MAIN_EVENT_REGISTRATION_URL = "YOUR_MAIN_GOOGLE_FORM_URL";
 
+/* Main event registration — official Google Registration Form.
+   NOTE: no new main registration form URL has been supplied yet;
+   the project’s existing official form is retained below.
+   Swap this value when the new form link is published. */
+const MAIN_EVENT_REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdkMUWZlrEbM_ta3a6Tw9XIUkhkz52JKBB2Wfke_lTNaO7RQA/viewform?usp=header";
+
+/* Main event guidelines — official “REVOLUTION ’26” guidelines PDF */
+const MAIN_EVENT_GUIDELINES_PDF = "https://drive.google.com/file/d/1wyhuX9Wu8zMv5ajw26EzY6bmR6Bo3TEQ/view?usp=sharing";
+
+/* Per-competition registration forms (single official form for
+   all five competitions until category-specific forms exist) */
 const registrationLinks = {
   entrepreneurshipQuiz: "https://docs.google.com/forms/d/e/1FAIpQLSfaUS61G7CCvWZ0dxbToU9BmpVtsCM-5_hXYaqCDEZIMF15Xg/viewform?usp=publish-editor",
   businessPitch: "https://docs.google.com/forms/d/e/1FAIpQLSe5naQZP2GT_W7mwdF3jjemodSi0-kq1k-4UI7QqSuNUF43vA/viewform?usp=publish-editor",
@@ -31,16 +37,21 @@ const registrationLinks = {
 };
 
 /* ------------------------------------------------------------
-   2) GUIDELINES PDF
-   Official competition guidelines document. The “Guidelines”
-   button on every competition card points here. A single shared
-   PDF is referenced by all five challenges — replace the URL to
-   publish a revised document.
+   2) COMPETITION GUIDELINES — official per-competition PDFs.
+   Each competition card’s “View competition guidelines” button
+   points at its own document. Keys must match the competition
+   ids in section 3. Leave a value "" to hide that button.
    ------------------------------------------------------------ */
-const guidelinesPdf = "https://drive.google.com/uc?export=download&id=1Dr1VgbEtQvEgti67C9021_cEpORGQhr5";
+const competitionGuidelines = {
+  entrepreneurshipQuiz: "https://drive.google.com/file/d/1nSnbTDIG8NONJBZV_UMVwhJSnL8VaU8h/view?usp=sharing",
+  businessPitch: "https://drive.google.com/file/d/1T25L76IE9gxLhjuOcfKIqt5khjetVoFn/view?usp=sharing",
+  problemSolving: "https://drive.google.com/file/d/10oupTKz6mlm-0ELHaCDSRnU-uWIdwPTJ/view?usp=sharing",
+  aiVideoCreation: "https://drive.google.com/file/d/1hDXkVjptN7PF-Q5ug0IB4iL-hQhEh2TC/view?usp=sharing",
+  posterDesigning: "https://drive.google.com/file/d/1jTz0B3BHjG_i-PUub07Fv1XD4g6UHVTB/view?usp=sharing"
+};
 
 /* ------------------------------------------------------------
-   3) COMPETITIONS — the five official REVOLUTION ’26 challenges.
+   2) COMPETITIONS — the five official REVOLUTION ’26 challenges.
    Rendered as editorial panels in the order below.
    ------------------------------------------------------------ */
 const competitions = [
@@ -145,7 +156,7 @@ const competitions = [
 ];
 
 /* ------------------------------------------------------------
-   4) IMPORTANT DATES — official timeline.
+   3) IMPORTANT DATES — official timeline.
    Registration and submission deadlines are announced by the
    organizing committee; the competition day is fixed below.
    ------------------------------------------------------------ */
@@ -156,7 +167,7 @@ const eventDates = [
 ];
 
 /* ------------------------------------------------------------
-   5) FAQ
+   4) FAQ
    ------------------------------------------------------------ */
 const faqs = [
   {
